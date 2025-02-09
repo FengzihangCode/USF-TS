@@ -1,9 +1,20 @@
 {
   "name": "@usf-org/zod",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zod schema for USF.",
   "author": "Naily Zero <zero@naily.cc> (https://naily.cc)",
+  "license": "MIT",
+  "homepage": "https://github.com/USF-org/USF-TS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/USF-org/USF-TS.git",
+    "directory": "packages/schema"
+  },
+  "bugs": {
+    "url": "https://github.com/USF-org/USF-TS/issues",
+    "email": "zero@naily.cc"
+  },
   "keywords": [
     "zod",
     "schema",
@@ -19,6 +30,12 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">16"
+  },
   "scripts": {
     "build": "tsup",
     "watch": "tsup -w",
