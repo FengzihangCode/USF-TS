@@ -5,10 +5,12 @@
   "description": "Zod schema for USF.",
   "author": "Naily Zero <zero@naily.cc> (https://naily.cc)",
   "keywords": [
-    "es-project-template"
+    "zod",
+    "schema",
+    "usf"
   ],
   "exports": {
-    "./index": {
+    ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
@@ -19,12 +21,13 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "watch": "tsup -w"
+    "watch": "tsup -w",
+    "prepublishOnly": "tsup"
   },
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "tsup": "^8.3.0"
+  "dependencies": {
+    "zod": "^3.24.1"
   }
 }
