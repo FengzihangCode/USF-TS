@@ -46,7 +46,7 @@ export const Schema = z.object({
   version: z.number()
     .int()
     .refine(v => v === 1, { message: 'USF version, currently fixed at 1.' })
-    .describe('USF version, currently fixed at 1.'),
+    .describe('USF version'),
 
   /**
    * Mapping of subject names to their details

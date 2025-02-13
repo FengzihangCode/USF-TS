@@ -12,10 +12,9 @@ export interface ToJsonSchemaOptions {
 
 export function toJsonSchema(schema: typeof Schema, options: ToJsonSchemaOptions = {}): ReturnType<typeof zodToJsonSchema> {
   const parsedJsonSchema = zodToJsonSchema(schema)
-  parsedJsonSchema.$schema = options.$schema ?? 'https://json-schema.org/draft/2020-12/schema'
-  parsedJsonSchema.title = options.title ?? 'Universal Schedule Format (USF)'
   // eslint-disable-next-line ts/ban-ts-comment
   // @ts-expect-error
-  parsedJsonSchema.properties.version.enum = options.versionEnum ?? [1]
+  parsedJsonSchema.$id = 'https://json.schemastore.org/usf.json'
+  parsedJsonSchema.title = options.title ?? 'Universal Schedule Format (USF)'
   return parsedJsonSchema
 }
